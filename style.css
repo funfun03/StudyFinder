@@ -1,0 +1,97 @@
+/* Tổng quan body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #00695c;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+/* Gallery items */
+.gallery-item {
+    width: calc(25% - 30px); /* Mặc định: Mỗi ảnh chiếm 25% chiều rộng (trên màn hình lớn) */
+    border: 2px solid #004d40;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hiệu ứng hover */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: #004d40;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Đối với màn hình vừa (tablet, dưới 1024px) */
+@media (max-width: 1024px) {
+    .gallery-item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* Đối với màn hình nhỏ (điện thoại, dưới 768px) */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px); 
+    }
+}
+
+/* Đối với màn hình rất nhỏ (điện thoại nhỏ, dưới 480px) */
+@media (max-width: 480px) {
+    .gallery-item {
+        width: calc(100% - 10px); 
+    }
+
+    header h1 {
+        font-size: 1.8rem; 
+    }
+
+    footer p {
+        font-size: 0.8rem; 
+    }
+}
