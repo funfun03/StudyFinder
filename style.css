@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 60px 0 0 0;
     background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
     color: #333;
     text-align: center;
@@ -79,6 +79,9 @@ footer p {
     .gallery-item {
         width: calc(50% - 20px); 
     }
+    body {
+        padding: 20px 0 0 0;
+    }
 }
 
 /* Đối với màn hình rất nhỏ (điện thoại nhỏ, dưới 480px) */
@@ -93,5 +96,8 @@ footer p {
 
     footer p {
         font-size: 0.8rem; 
+    }
+    body {
+        padding: 20px 0 0 0;
     }
 }
